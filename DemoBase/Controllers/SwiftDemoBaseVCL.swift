@@ -46,5 +46,16 @@ class SwiftDemoBaseVCL: LittleHTableViewBaseVCL {
         super.setParameters(params)
         
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.tableView?.deselectRow(at: indexPath, animated: false)//这个方法为了解决 弹出alert之后alert消失 cell短时间内点击无响应的问题
+        let cell = tableView.cellForRow(at: indexPath) as! SwiftDemoBaseCell
+        let aItem = cell.item as! SwiftDemoBaseItem
+        self.openDemoPage(aItem)
+    }
+    
+    func openDemoPage(_ item:SwiftDemoBaseItem?) -> Void {
+    
+    }
 
 }

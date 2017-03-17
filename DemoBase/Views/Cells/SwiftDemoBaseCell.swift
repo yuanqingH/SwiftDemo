@@ -16,6 +16,7 @@ class SwiftDemoBaseCell: LittleHTableViewBaseCell {
     override func setObject(_ obj: AnyObject?) {
         super.setObject(obj)
         self.needShowLineLayer = true
+        self.selectionStyle = .none
         if obj is SwiftDemoBaseItem {
             let aItem = obj as? SwiftDemoBaseItem
             self.titleLabel?.text = aItem?.title

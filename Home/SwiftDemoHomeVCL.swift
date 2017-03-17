@@ -26,13 +26,9 @@ class SwiftDemoHomeVCL: SwiftDemoBaseVCL {
     
     
 
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath) as! SwiftDemoBaseCell
-        let aItem = cell.item as! SwiftDemoBaseItem
-        self.openDemoPage(aItem)
-    }
     
-    func openDemoPage(_ item:SwiftDemoBaseItem?) -> Void {
+    
+    override func openDemoPage(_ item:SwiftDemoBaseItem?) -> Void {
         let title : String = (item?.title)!
         switch title {
         case "AlertController":
